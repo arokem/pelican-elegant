@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% if article.ipython %}
+    <link rel="stylesheet" href="/theme/css/ipython.min.css">
+{% endif %}
+
 {% block title %}
 {{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %} · {{ super() }}
 {% endblock title %}
